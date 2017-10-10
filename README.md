@@ -1,3 +1,3 @@
-## Learning Python quiz ##
+## Learning Python ##
 ----------
-##### Chaper 1. A Python Q&A Session
+##### 01. Python Object Type
