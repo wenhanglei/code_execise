@@ -54,3 +54,50 @@ when dealing with floating-point numbers. something odd:
 
 - indexing
 - slicing
+
+## Immutability
+
+- stings are *immutable* in Python
+- numbers, strings, and tuples are immutable
+
+## Type-Specific Methods
+
+although sequence operations are generic, methods are not
+
+## Getting Help
+
+**dir**: returns a list of all the attributes available for a given object.
+
+The **dir** simply gives the methods' names. To ask what they do, you can pass them to **help** function.
+
+**help** : a tool for extracting documentation from objects.
+
+## Other Ways to Code Strings
+
+Python allow strings to be enclosed in single or double quote 
+characters. It also allows multiline string literals enclosed in triple quotes.
+
+
+## Pattern Matching
+
+## Lists
+
+	>>> M = [[1, 2, 3],
+		     [4, 5, 6],
+		     [7, 8, 9]]
+	>>> M
+	[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+- **Bounds Checking**
+- **Nesting**
+- **Comprehensions**
+
+	List comprehensions derive from set notation; they are a way to 
+	build a new list by running an expression on each item in a sequence, one at a time, from left to right.
+
+		>>> [row[1] + 1 for row in M]
+		[3, 6, 9]
+		>>> [row[1] for row in M if row[1] % 2 == 0]
+		[2, 8]
+
+
