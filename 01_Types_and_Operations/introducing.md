@@ -100,4 +100,16 @@ characters. It also allows multiline string literals enclosed in triple quotes.
 		>>> [row[1] for row in M if row[1] % 2 == 0]
 		[2, 8]
 
+## Dictionary
+
+	The list comprehension, though, and related functional programming 
+	tools like **map** nad **filter**, will generally run faster than a **for** loop.
+
+## Tuples
+
+tuples are sequences, like lists, but they are immutable.
+
+## Files
+
+
 
