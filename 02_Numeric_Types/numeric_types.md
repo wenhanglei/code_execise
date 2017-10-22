@@ -41,5 +41,38 @@ Utility modues
 
 ## Python Expression Operators
 
+- Mixed operators follow operator precedence
+- Parentheses group subexpression
+- Mixed types are converted up
 
+## Variables and Basic Expressions
+
+## Numeric Display Formats
+
+## str and repr Display Formats
+
+**repr**(and the default interactive echo) produces results that look
+as though they were code; **str**(and the **print** operation) 
+converts to a typically more user-friendly format if available.
+
+## Comparisons: Normal and Chained
+
+	>>> X = 2
+	>>> Y = 4
+	>>> Z = 6
+	>>> 
+	>>> X < Y < Z
+	True
+	>>> X < Y and Y < Z
+	True
+
+## Division: Classic, Floor, and True
+
+X / Y: In Python 3.0, it performs *true* division, always keeping 
+remainders regardless of types.
+
+X // Y: Floor division, always truncate fractional remainders down
+to their floor.
+
+## Integer Precision 
 
