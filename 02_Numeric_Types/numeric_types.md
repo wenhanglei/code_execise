@@ -76,3 +76,45 @@ to their floor.
 
 ## Integer Precision 
 
+## Complex Numbers
+
+## Hexadecimal, Octal, and Binary Notation
+
+	>>> 0o1, 0o20, 0o377
+	(1, 16, 255)
+	>>> 0x01, 0x10, 0xFF
+	(1, 16, 255)
+	>>> 0b1, 0b10000, 0b11111111
+	(1, 16, 255)
+
+buil-in functions that allow you to convert integers to other bases'
+digit strings:
+
+	>>> oct(56), hex(56), bin(56)
+	('0o70', '0x38', '0b111000')
+
+the built-in **int** function converts a string of digits to an 
+integer, and an optional second argument lets you specify the 
+numeric base:
+
+	>>> int('65'), int('100', 8), int('40', 16), int('1000000', 2)
+	(65, 64, 64, 64)
+
+The **eval** function treats strings as though they were Python 
+code, but usually runs more slowly--it actually compiles and runs 
+the string as a piece of a program.
+
+	>>> eval('64'), eval('0o100'), eval('0x40'), eval('0b1000000')
+	(64, 64, 64, 64)
+
+you can also convert integers to octal and hexadecimal strings with
+*string formatting* method calls and expressions:
+
+	>>> '{0:o}, {1:x}, {2:b}'.format(64, 64, 64)
+	'100, 40, 1000000'
+	>>> '%o, %x, %X' % (64, 255, 255)
+	'100, ff, FF'
+
+## Bitwise Operations
+
+
