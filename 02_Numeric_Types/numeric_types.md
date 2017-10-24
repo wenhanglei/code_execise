@@ -117,4 +117,30 @@ you can also convert integers to octal and hexadecimal strings with
 
 ## Bitwise Operations
 
+## Decimal Type
+
+	>>> 0.1 + 0.1 + 0.1 - 0.3
+	5.551115123125783e-17
+	>>> from decimal import Decimal
+	>>> Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3')
+	Decimal('0.0')
+
+## Fraction Types
+
+## Sets
+
+the *set* -- an unordered collection of unique and immutable objects
+that supports operations corresponding to mathematical set theoty.
+
+sets are unordered and do not map keys to values, they are neither
+sequence nor mapping types.
+
+## Booleans
+
+	>>> True == 1
+	True
+	>>> True is 1
+	False
+	>>> True + 3
+	4
 
