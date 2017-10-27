@@ -27,3 +27,20 @@ escape code, it simply keeps the backslash in the resulting string:
 
 ## Raw Strings Suppress Escapes
 
+## Triple Quotes Code Multiline Block Strings
+
+	>>> s = '''I am your father's dady'''
+	>>> s
+	"I am your father's dady"
+	>>> b = '''I am your mather\'s mam'''
+	>>> b
+	"I am your mather's mam"
+
+you can see the escape still work in three quotes.
+
+Triple-quoted strings are useful any time you need multiline text in 
+your program; for example, to embed mutiline error message or HTML 
+or XML code in your source code files.
+
+##Indexing and Slicing
+
