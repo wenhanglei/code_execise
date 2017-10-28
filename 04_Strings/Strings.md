@@ -44,3 +44,34 @@ or XML code in your source code files.
 
 ##Indexing and Slicing
 
+**Extended slicing: the third limit and slice ojects**
+
+	>>> S = 'abcdefghijklmnop'
+	>>> S[1:10:2]
+	'bdfhj'
+	>>> S[::2]
+	'acegikmo'
+
+use a negative stride to *reverse* the sequence:
+
+	>>> S = 'World'
+	>>> S[::-1]
+	'dlroW'
+
+## String Conversion Tools
+
+	>>> int("42"), str(42)
+	(42, '42')
+	>>> str(3.1415), float("1.5")
+	('3.1415', 1.5)
+
+- Character code conventions
+
+	>>> ord('a')
+	97
+	>>> chr(97)
+	'a'
+
+- 
+
+
