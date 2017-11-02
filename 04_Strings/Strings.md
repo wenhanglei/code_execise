@@ -72,6 +72,19 @@ use a negative stride to *reverse* the sequence:
 	>>> chr(97)
 	'a'
 
-- 
+- Changing Strings
+- String Methods
+
+## String Method Example
+- Changing Strings
+- Parsing Text
+
+## String Formatting Expressions
+
+- *String formatting expressions*
+- *String formatting method calls*
+
+
+
 
 
