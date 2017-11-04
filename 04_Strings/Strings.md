@@ -84,7 +84,16 @@ use a negative stride to *reverse* the sequence:
 - *String formatting expressions*
 - *String formatting method calls*
 
+## Advanced String Formatting Expressions
 
+	%[(name)][flags][width][.precision]typecode
 
+- name: a dictionary key;
+- flags: list flags that specify things like left justification (-),
+numeric sign (+), and zero fills (0);
+- width: give a total minimum field width and the number of digits 
+after a decimal point;
+
+Dictionary-Based String Formatting Expressions
 
 
