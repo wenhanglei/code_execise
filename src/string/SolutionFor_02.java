@@ -8,8 +8,13 @@ public class SolutionFor_02 {
 	 * 思路：
 	 * 
 	 */
-	public String replaceSpace(StringBuffer str) {
+	public static String replaceSpace(StringBuffer str) {
 		
 		return null;
+	}
+	
+	public static void main(String[] args) {
+		StringBuffer str = new StringBuffer("We Are Happy.");
+		System.out.println(replaceSpace(str));
 	}
 }
