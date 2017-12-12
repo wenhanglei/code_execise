@@ -6,11 +6,20 @@ package string;
 public class SolutionFor_02 {
 	/*
 	 * 思路：
-	 * 
+	 * 使用额外的StringBuffer辅助
 	 */
 	public static String replaceSpace(StringBuffer str) {
-		
-		return null;
+		//获取所有字符组成的数组
+		char[] chars = str.toString().toCharArray();
+		//创建用于装载替换后字符串的新数组
+		StringBuffer sb = new StringBuffer();
+		for(int i = 0; i < chars.length; i++) {
+			if(chars[i] == ' ')
+				sb.append("%20");
+			else
+				sb.append(chars[i]);
+		}
+		return sb.toString();
 	}
 	
 	public static void main(String[] args) {
