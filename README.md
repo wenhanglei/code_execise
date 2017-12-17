@@ -26,5 +26,9 @@
 
 - [旋转数组的最小数字](src/search/SolutionFor_06.java)
 
+[Sequence](src/sequence)
+
+- [斐波那契数列的第N项](src/sequence/SolutionFor_07.java)
+
 
 
