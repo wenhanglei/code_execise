@@ -33,6 +33,7 @@
 [recursion](src/recursion)
 
 - [跳台阶](src/recursion/SolutionFor_08.java)
+- [变态跳台阶](src/recursion/SolutionFor_09.java)
 
 
 
