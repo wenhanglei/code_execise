@@ -40,5 +40,9 @@
 
 - [二进制1的个数](src/bitwise/SolutionFor_11.java)
 
+[integrity](src/integrity)
+
+- [数值的整数次方](src/integrity/SolutionFor_12.java)
+
 
 
