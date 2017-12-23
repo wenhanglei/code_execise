@@ -5,6 +5,7 @@
 [Array](src/array)
 
 - [二维数组中的查找](src/array/SolutionFor_01.java)
+- [调整数组顺序使奇数位于偶数前面](src/array/SolutionFor_13.java)
 
 [String](src/string)
 
