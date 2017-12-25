@@ -29,6 +29,25 @@ public class SolutionFor_13 {
     }
 	
 	/**
+	 * 使用两个队列辅助完成调换位置：
+	 * 时间复杂度：O(n)
+	 * 空间复杂度：O(n)
+	 * 缺点空间复杂度太高了
+	 */
+/*	public void reOrderArray(int [] array) {
+		//准备两个队列
+		Queue<Integer> q1 = new LinkedBlockingDeque<Integer>();
+		Queue<Integer> q2 = new LinkedBlockingDeque<Integer>();
+		for(int i = 0; i < array.length; i++) {
+			if(array[i]%2 != 0) q1.add(array[i]);
+			else q2.add(array[i]);
+		}
+		int i = 0; 
+		for(Integer j : q1) array[i++]=j;
+		for(Integer k : q2) array[i++]=k;
+    }*/
+	
+	/**
 	 * 调换位置的函数
 	 */
 	private void exch(int[] array, int a, int b) {
