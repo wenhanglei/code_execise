@@ -8,8 +8,13 @@ public class SolutionFor_17 {
 	 * 
 	 */
 	public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+        if(root1 == null || root2 == null) return false;
         return false;
     }
+	
+	private TreeNode iter(TreeNode a, TreeNode b) {
+		return null;
+	}
 	
 	/**
 	 * 测试函数
