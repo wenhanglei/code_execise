@@ -24,6 +24,7 @@
 - [重建二叉树](src/tree/SolutionFor_04.java)
 - [树的子结构](src/tree/SolutionFor_17.java)
 - [二叉树的镜像](src/tree/SolutionFor_18.java)
+- [从上往下打印二叉树](src/tree/SolutionFor_22.java)
 
 [Queue and Stack](src/queue_and_stack)
 
