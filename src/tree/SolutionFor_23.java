@@ -12,46 +12,39 @@ public class SolutionFor_23 {
 	 * 后序遍历序列从后向前遍历
 	 */
 	public boolean VerifySquenceOfBST(int [] sequence) {
-		if(sequence.length == 1) return true;
-		else 
-			return verifySquenceOfBST(sequence, 0, sequence.length-1);
+		if(sequence.length == 0) return false;
+		else return verifySquenceOfBST(sequence, 0, sequence.length-1);
     }
-	/**
-	 * 求当前子树的左右子树分割值
-	 */
-	private int partition(int[] sequence, int lo, int hi){
-		for(int i = hi-1; i >= lo; i--){
-			if(sequence[i] < sequence[hi])
-				return i;
-		}
-		return lo;
-	}
 	
 	private boolean verifySquenceOfBST(int[] sequence, int lo, int hi) {
-		int max = lo;
-		int min = lo;
+		if(hi <= lo+1) return true;
+		//如果只有左子树
 		if(sequence[hi] > sequence[hi-1]){
-			for(int i = hi-2; i >= lo; i--) {
-				if(sequence[i] > sequence[hi]){
-					min = hi-1;
-					max = i;
-					break;
-				}
+			for(int i = hi-2; i >= 0; i--) {
+				if(sequence[i] > sequence[hi])
+					return false;
 			}
-		}else if(sequence[hi] < sequence[hi-1]){
-			for(int i = hi-2; i >= lo; i--) {
-				if(sequence[i] < sequence[i]){
-					max = hi-1;
+			return verifySquenceOfBST(sequence, lo, hi-1);
+		}else{
+			//保存最小值的下标
+			int min = lo-1;
+			for(int i = hi-2; i >= 0; i--) {
+				if(sequence[i] < sequence[hi]){
 					min = i;
 					break;
 				}
 			}
-		}
-		if(max < min) return false;
-		else if(max == min) return true;
-		else{
-			int mid = partition(sequence, lo, hi);
-			return verifySquenceOfBST(sequence, lo, mid-1) && verifySquenceOfBST(sequence, mid, hi-1);
+			for(int i = min; i >= 0; i--) {
+				if(sequence[i] > sequence[hi]){
+					return false;
+				}
+			}
+			if(min == lo-1) {
+				return verifySquenceOfBST(sequence, lo, hi-1);
+			}else {
+				return verifySquenceOfBST(sequence, lo, min) &&
+						verifySquenceOfBST(sequence, min+1, hi-1);
+			}
 		}
 	}
 	
@@ -63,7 +56,9 @@ public class SolutionFor_23 {
 		int[] seq1 = {2, 5, 4};
 		int[] seq2 = {7, 2, 5, 6};
 		int[] seq3 = {7, 4, 6, 5};
+		int[] seq4 = {5, 4, 3, 2, 1};
+		int[] seq5 = {4, 6, 7, 5};
 		SolutionFor_23 solution = new SolutionFor_23();
-		System.out.println(solution.VerifySquenceOfBST(seq3));
+		System.out.println(solution.VerifySquenceOfBST(seq2));
 	}
 }
