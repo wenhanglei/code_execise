@@ -26,6 +26,7 @@
 - [二叉树的镜像](src/tree/SolutionFor_18.java)
 - [从上往下打印二叉树](src/tree/SolutionFor_22.java)
 - [二叉搜索树的后序遍历序列](src/tree/SolutionFor_23.java)
+- [二叉树中和为某一值的路径](src/tree/SolutionFor_24.java)
 
 [Queue and Stack](src/queue_and_stack)
 
