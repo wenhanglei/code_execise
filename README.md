@@ -11,6 +11,7 @@
 [String](src/string)
 
 - [替换空格](src/string/SolutionFor_02.java)
+- [字符串的排列](src/string/SolutionFor_27.java)
 
 [Linklist](src/linklist)
 
