@@ -8,6 +8,7 @@
 - [调整数组顺序使奇数位于偶数前面](src/array/SolutionFor_13.java)
 - [顺时针打印矩阵](src/array/SolutionFor_19.java)
 - [数组中出现次数超过一半的数字](src/array/SolutionFor_28.java)
+- [最小的K个数](src/array/SolutionFor_29.java)
 
 [String](src/string)
 
