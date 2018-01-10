@@ -9,6 +9,7 @@
 - [顺时针打印矩阵](src/array/SolutionFor_19.java)
 - [数组中出现次数超过一半的数字](src/array/SolutionFor_28.java)
 - [最小的K个数](src/array/SolutionFor_29.java)
+- [连续子数组的最大和](src/array/SolutionFor_30.java)
 
 [String](src/string)
 
