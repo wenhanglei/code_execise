@@ -8,7 +8,52 @@ package array;
  * 你会不会被他忽悠住？(子向量的长度至少是1)
  */
 public class SolutionFor_30 {
+	/*
+	 * 思路：
+	 * 动态规划
+	 * 
+	 */
 	public int FindGreatestSumOfSubArray(int[] array) {
-        return 0;
+		//数组长度
+		int N = array.length;
+		//结果变量
+		int res = array[N-1];
+		//边界条件判断
+		if(array == null || array.length < 2) return res;
+		//后缀数组的和, 最大值， 最小值
+		int sum = 0, max = 0, min = 0;
+		//从后向前遍历该数组
+		for(int i = N-1; i >= 0; i--){
+			sum += array[i];
+			if(sum >= max || sum-min > res){
+				max = sum;
+				res = max - min;
+			}
+			if(sum < min)
+				min = sum;
+		}
+		//返回结果
+		return res;
     }
+	
+	private void arraySum(int[] array){
+		int sum = 0;
+		for(int i = array.length - 1; i >= 0; i--) {
+			sum += array[i];
+			System.out.println(sum);
+		}
+	}
+	
+	/**
+	 * 测试函数
+	 */
+	public static void main(String[] args) {
+		int[] array = {6, -3, -2, 7, -15, 1, 2, 2};
+		int[] arr1 = {-2, -8, -1, -5, -9};
+		int[] arr2 = {1, -10};
+		int[] arr3 = {-10, 1};
+		SolutionFor_30 solution = new SolutionFor_30();
+		System.out.println(solution.FindGreatestSumOfSubArray(arr3));
+//		solution.arraySum(arr3);
+	}
 }
