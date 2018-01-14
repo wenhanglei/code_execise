@@ -11,6 +11,7 @@
 - [最小的K个数](src/array/SolutionFor_29.java)
 - [连续子数组的最大和](src/array/SolutionFor_30.java)
 - [把数组排成最小的数](src/array/SolutionFor_32.java)
+- [丑数](src/array/SolutionFor_33.java)
 
 [String](src/string)
 
