@@ -13,6 +13,7 @@
 - [把数组排成最小的数](src/array/SolutionFor_32.java)
 - [丑数](src/array/SolutionFor_33.java)
 - [数组中的逆序对](src/array/SolutionFor_35.java)
+- [数字在排序数组中出现的次数](src/array/SolutionFor_37.java)
 
 [String](src/string)
 
