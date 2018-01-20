@@ -40,6 +40,7 @@
 - [二叉树中和为某一值的路径](src/tree/SolutionFor_24.java)
 - [二叉搜索树与双向链表](src/tree/SolutionFor_26.java)
 - [二叉树的深度](src/tree/SolutionFor_38.java)
+- [平衡二叉树](src/tree/SolutionFor_39.java)
 
 [Queue and Stack](src/queue_and_stack)
 
