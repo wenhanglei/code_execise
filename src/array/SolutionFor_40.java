@@ -1,8 +1,5 @@
 package array;
 
-import java.util.HashMap;
-import java.util.Map.Entry;
-
 /**
  * 一个整型数组里除了两个数字之外，其他的数字都出现了两次。
  * 请写程序找出这两个只出现一次的数字。
@@ -10,28 +7,45 @@ import java.util.Map.Entry;
 public class SolutionFor_40 {
 	/*
 	 * 思路：
-	 * hashmap保存对应的数的出现次数
+	 * 一个数和它本身异或为0
 	 */
 	public void FindNumsAppearOnce(int [] array,int num1[] , int num2[]) {
-		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-		for(int i = 0; i < array.length; i++) {
-			if(map.containsKey(array[i])){
-				map.put(array[i], map.get(array[i])+1);
-			}else
-				map.put(array[i], 1);
+		//判断边界条件
+		if(array == null || array.length < 2){
+			num1[0] = -1;
+			num2[0] = -1;
 		}
-		int i = 0;
-		for(Entry ent : map.entrySet()){
-			if((int)ent.getValue() == 1){
-				if(i == 0) {
-					num1[0] = (int) ent.getKey();
-					i++;
-				}else{
-					num2[0] = (int) ent.getKey();
-				}
+		int len = array.length, res = 0;
+		for(int i = 0; i < len; i++) {
+			res ^= array[i];
+		}
+		int x = Integer.highestOneBit(res);
+		int res1 = 0;
+		int res2 = 0;
+		for(int i = 0; i < len; i++) {
+			if((array[i] & x) == x){
+				res1 ^= array[i];
+			}else{
+				res2 ^= array[i];
 			}
 		}
+		num1[0] = res1;
+		num2[0] = res2;
     }
+	
+	/**
+	 * 找出数组中只出现一次的数
+	 * @param arr
+	 * @return
+	 */
+	public static int fintOneTimeNum(int[] arr) {
+		if(arr == null) return -1;
+		int len = arr.length, res = 0;
+		for(int i = 0; i < len; i++){
+			res ^= arr[i];
+		}
+		return res;
+	}
 	
 	/**
 	 * 测试函数
@@ -43,5 +57,8 @@ public class SolutionFor_40 {
 		SolutionFor_40 solution = new SolutionFor_40();
 		solution.FindNumsAppearOnce(arr, num1, num2);
 		System.out.println(num1[0]+ " " + num2[0]);
+		
+//		int[] arr = {3, 2, 3};
+//		System.out.println(fintOneTimeNum(arr));
 	}
 }
