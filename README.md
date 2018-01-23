@@ -15,6 +15,7 @@
 - [数组中的逆序对](src/array/SolutionFor_35.java)
 - [数字在排序数组中出现的次数](src/array/SolutionFor_37.java)
 - [数组中只出现一次的数字](src/array/SolutionFor_40.java)
+- [和为s的两个数字](src/array/SolutionFor_42.java)
 
 [String](src/string)
 
