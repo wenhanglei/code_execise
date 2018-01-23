@@ -14,8 +14,38 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class SolutionFor_41 {
 	/*
 	 * 思路：
+	 * lo表示数组的最低位下标，hi表示数组的最高位下标
 	 */
-	public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
+	public ArrayList<ArrayList<Integer>> findContinuousSequence(int sum) {
+		int lo = 1, hi = 2, len = (sum+1)/2, s = 0;
+		ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+		while(lo < len) {
+			if(sum(lo, hi) < sum) hi++;
+			else if(sum(lo, hi) > sum) lo++;
+			else{
+				ArrayList<Integer> temp = new ArrayList<Integer>();
+				for(int i = lo; i <= hi; i++) {
+					temp.add(i);
+				}
+				res.add(temp);
+				hi++;
+			}
+		}
+		return res;
+	}
+	
+	/**
+	 * 求lo到hi的连续正数的和
+	 */
+	private int sum(int lo, int hi){
+		int sum = 0;
+		for(int i = lo; i <= hi; i++){
+			sum += i;
+		}
+		return sum;
+	}
+	
+	public static ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
 		//结果list
 		ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
 		//判断边界条件
