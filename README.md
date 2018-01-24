@@ -23,6 +23,7 @@
 - [字符串的排列](src/string/SolutionFor_27.java)
 - [第一个只出现一次的字符](src/string/SolutionFor_34.java)
 - [左旋转字符串](src/string/SolutionFor_43.java)
+- [翻转单词顺序列](src/string/SolutionFor_44.java)
 
 [Linklist](src/linklist)
 
