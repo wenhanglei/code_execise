@@ -77,5 +77,9 @@
 - [整数中1出现的次数](src/integrity/SolutionFor_31.java)
 - [和为s的连续正数序列](src/integrity/SolutionFor_41.java)
 
+[simulation](src/simulation)
+
+- [圆圈中最后剩下的数](src/simulation/SolutionFor_46.java)
+
 
 
