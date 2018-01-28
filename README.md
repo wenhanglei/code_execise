@@ -60,6 +60,7 @@
 [Sequence](src/sequence)
 
 - [斐波那契数列的第N项](src/sequence/SolutionFor_07.java)
+- [求1+2+3+...+n](src/sequence/SolutionFor_47.java)
 
 [recursion](src/recursion)
 
