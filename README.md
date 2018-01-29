@@ -77,6 +77,7 @@
 - [数值的整数次方](src/integrity/SolutionFor_12.java)
 - [整数中1出现的次数](src/integrity/SolutionFor_31.java)
 - [和为s的连续正数序列](src/integrity/SolutionFor_41.java)
+- [不用加减乘除做加法](src/integrity/SolutionFor_48.java)
 
 [simulation](src/simulation)
 
