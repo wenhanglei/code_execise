@@ -25,6 +25,7 @@
 - [左旋转字符串](src/string/SolutionFor_43.java)
 - [翻转单词顺序列](src/string/SolutionFor_44.java)
 - [扑克牌顺子](src/string/SolutionFor_45.java)
+- [将字符串转化成数字](src/string/SolutionFor_49.java)
 
 [Linklist](src/linklist)
 
