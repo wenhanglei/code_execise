@@ -30,6 +30,7 @@
 - [将字符串转化成数字](src/string/SolutionFor_49.java)
 - [正则表达式匹配](src/string/SolutionFor_52.java)
 - [表示数值的字符串](src/string/SolutionFor_53.java)
+- [字符流中第一个不重复的字符](src/string/SolutionFor_54.java)
 
 [Linklist](src/linklist)
 
