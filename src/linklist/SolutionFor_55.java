@@ -1,8 +1,5 @@
 package linklist;
 
-import java.util.HashMap;
-import java.util.Map;
-
 
 /**
  * 一个链表中包含环，请找出该链表的环的入口结点。
@@ -10,14 +7,21 @@ import java.util.Map;
  */
 public class SolutionFor_55 {
 	public ListNode EntryNodeOfLoop(ListNode pHead){
-		if(pHead == null) return null;
-        Map<ListNode, Object> map = new HashMap<ListNode, Object>();
-        ListNode curr = pHead;
-        while(curr != null){
-        	if(map.containsKey(curr)) return curr;
-        	map.put(curr, null);
-        	curr = curr.next;
-        }
-        return null;
+		//判断边界条件
+		if(pHead == null || pHead.next == null) return null;
+		ListNode slow = pHead, fast = pHead;
+		while(slow != null && fast != null){
+			slow = slow.next;
+			fast = fast.next.next;
+			if(slow == fast){
+				fast = pHead;
+				while(slow != fast){
+					slow = slow.next;
+					fast = fast.next;
+				}
+				return slow;
+			}
+		}
+		return null;
     }
 }
