@@ -41,6 +41,7 @@
 - [复杂链表的复制](src/linklist/SolutionFor_25.java)
 - [两个链表的第一个公共结点](src/linklist/SolutionFor_36.java)
 - [链表中环的入口结点](src/linklist/SolutionFor_55.java)
+- [删除链表中的重复节点](src/linklist/SolutionFor_56.java)
 
 [Tree](src/tree)
 

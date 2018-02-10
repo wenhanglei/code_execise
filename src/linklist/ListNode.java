@@ -6,4 +6,8 @@ public class ListNode {
 	ListNode(int val) {
 		this.val = val;
 	}
+	
+	public String toString() {
+		return ""+val;
+	}
 }
