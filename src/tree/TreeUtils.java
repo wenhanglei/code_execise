@@ -3,6 +3,23 @@ package tree;
 public class TreeUtils {
 	
 	/**
+	 * 从树中获取值为i的结点
+	 * @param pHead
+	 * @param i
+	 * @return
+	 */
+	public static TreeLinkNode getNode(TreeLinkNode pHead, int value){
+		if(pHead == null) return null;
+		TreeLinkNode res = null;
+		res = getNode(pHead.left, value);
+		if(res.val == value){
+			return res;
+		}
+		res = getNode(pHead.right, value);
+		return res;
+	}
+	
+	/**
 	 * 通过一个数组获得一个生成的数
 	 * @param arr
 	 * @return
