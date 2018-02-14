@@ -7,7 +7,6 @@ package tree;
 public class SolutionFor_57 {
 	public TreeLinkNode GetNext(TreeLinkNode pNode){
 		if(pNode == null) return null;
-		
         return null;
     }
 	
@@ -21,5 +20,6 @@ public class SolutionFor_57 {
 	public static void main(String[] args) {
 		int[] arr = {2, 3, '#', 6, 8, '#'};
 		TreeLinkNode node = TreeUtils.getTree(arr);
+		TreeLinkNode n = TreeUtils.getNode(node, 6);
 	}
 }

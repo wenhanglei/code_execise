@@ -2,21 +2,25 @@ package tree;
 
 public class TreeUtils {
 	
+	private static TreeLinkNode node;
+	
 	/**
 	 * 从树中获取值为i的结点
 	 * @param pHead
 	 * @param i
 	 * @return
 	 */
-	public static TreeLinkNode getNode(TreeLinkNode pHead, int value){
-		if(pHead == null) return null;
-		TreeLinkNode res = null;
-		res = getNode(pHead.left, value);
-		if(res.val == value){
-			return res;
+	public static TreeLinkNode getNode(TreeLinkNode n, int value){
+		recursion(n, value);
+		return node;
+	}
+	private static void recursion(TreeLinkNode n, int value){
+		if(n == null) return;
+		getNode(n.left, value);
+		if(n.val == value){
+			node = n;
 		}
-		res = getNode(pHead.right, value);
-		return res;
+		getNode(n.right, value);
 	}
 	
 	/**
