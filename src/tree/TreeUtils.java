@@ -23,6 +23,7 @@ public class TreeUtils {
 		getNode(n.right, value);
 	}
 	
+	
 	/**
 	 * 通过一个数组获得一个生成的数
 	 * @param arr
@@ -47,5 +48,27 @@ public class TreeUtils {
 		return node;
 	}
 	
+	/**
+	 * 通过一个数组获得一个生成的数
+	 * @param arr
+	 * @return
+	 */
+	public static TreeNode getNodeTree(int[] arr){
+		//检查边界
+		if(arr == null || arr.length == 0) return null;
+		return getNode(arr, 0);
+	}
+	
+	private static TreeNode getNode(int[] arr, int i){
+		int index = i+1;
+		if(i >= arr.length) return null;
+		TreeNode node = null;
+		if(arr[i] != '#'){
+			node = new TreeNode(arr[i]);
+			node.left = getNode(arr, index*2-1);
+			node.right = getNode(arr, index*2);
+		}
+		return node;
+	}
 	
 }
