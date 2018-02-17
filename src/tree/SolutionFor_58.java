@@ -9,30 +9,19 @@ import java.util.Stack;
  */
 public class SolutionFor_58 {
 	
-	private Stack<TreeNode> stack;
-	private TreeNode root;
-	private boolean isSym = true;
-	private boolean push = true;
-	
 	boolean isSymmetrical(TreeNode pRoot){
-		root = pRoot;
-		stack = new Stack<TreeNode>();
-		recursion(pRoot);
-		if(stack.isEmpty())
-			return isSym;
-		else return false;
+		if(pRoot == null) return true;
+		return equal(pRoot.left, pRoot.right);
     }
 	
-	private void recursion(TreeNode node){
-		if(node == null) return;
-		recursion(node.left);
-		if(!stack.isEmpty() && node == root) push = false;
-		if(push){
-			stack.push(node);
-		}else if(node != root){
-			if(!stack.isEmpty() && node.val != stack.pop().val) isSym = false;
+	private boolean equal(TreeNode n1, TreeNode n2){
+		if(n1 == null && n2 == null) return true;
+		else if(n1 != null && n2 != null){
+			if(equal(n1.left, n2.right) && equal(n1.right, n2.left)){
+				if(n1.val == n2.val) return true;
+			}
 		}
-		recursion(node.right);
+		return false;
 	}
 	
 	
@@ -41,7 +30,7 @@ public class SolutionFor_58 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] arr = {1};
+		int[] arr = {1, 2, 2, 3, 4, 4, '#'};
 		TreeNode pRoot = TreeUtils.getNodeTree(arr);
 		SolutionFor_58 sol = new SolutionFor_58();
 		boolean symmetrical = sol.isSymmetrical(pRoot);
