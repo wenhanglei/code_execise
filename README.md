@@ -56,6 +56,7 @@
 - [平衡二叉树](src/tree/SolutionFor_39.java)
 - [二叉树的下一个结点](src/tree/SolutionFor_57.java)
 - [对称的二叉树](src/tree/SolutionFor_58.java)
+- [按之字型打印二叉树](src/tree/SolutionFor_59.java)
 
 [Queue and Stack](src/queue_and_stack)
 
