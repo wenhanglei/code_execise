@@ -59,6 +59,7 @@
 - [按之字型打印二叉树](src/tree/SolutionFor_59.java)
 - [把二叉树打印成多行](src/tree/SolutionFor_60.java)
 - [序列化二叉树](src/tree/SolutionFor_61.java)
+- [二叉搜索树的第k个结点](src/tree/SolutionFor_62.java)
 
 [Queue and Stack](src/queue_and_stack)
 
