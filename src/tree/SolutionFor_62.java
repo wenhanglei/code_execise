@@ -8,7 +8,6 @@ public class SolutionFor_62 {
 	
 	private TreeNode res;
 	private int count;
-	private int k;
 	
 	/*
 	 * 思路：
@@ -16,20 +15,18 @@ public class SolutionFor_62 {
 	 */
 	TreeNode KthNode(TreeNode pRoot, int k){
 		if(pRoot == null || k <= 0) return null;
-		count = 1;
-		this.k = k;
-		midOrder(pRoot);
+		res = null;
+		midOrder(pRoot, k);
         return res;
     }
 	
-	private void midOrder(TreeNode node){
+	private void midOrder(TreeNode node, int k){
 		if(node == null) return;
-		midOrder(node.left);
-		if(count != k)
-			count++;
-		else if(count == k)
+		midOrder(node.left, k);
+		if(++count == k){
 			res = node;
-		midOrder(node.right);
+		}
+		midOrder(node.right, k);
 	}
 	
 	/**
@@ -41,7 +38,7 @@ public class SolutionFor_62 {
 		TreeNode root = TreeUtils.getNodeTree(arr);
 		
 		SolutionFor_62 sol = new SolutionFor_62();
-		TreeNode kthNode = sol.KthNode(root, 3);
+		TreeNode kthNode = sol.KthNode(root, 7);
 		System.out.println(kthNode.val);
 	}
 }
