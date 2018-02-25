@@ -66,12 +66,12 @@
 - [用两个栈实现队列](src/queue_and_stack/SolutionFor_05.java)
 - [包含min函数的栈](src/queue_and_stack/SolutionFor_20.java)
 - [栈的压入、弹出序列](src/queue_and_stack/SolutionFor_21.java)
+- [滑动窗口的最大值](src/search/SolutionFor_64.java)
 
 [Search](src/search)
 
 - [旋转数组的最小数字](src/search/SolutionFor_06.java)
 - [数据流中的中位数](src/search/SolutionFor_63.java)
-- [滑动窗口的最大值](src/search/SolutionFor_64.java)
 
 [Sequence](src/sequence)
 
