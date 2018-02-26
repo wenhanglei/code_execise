@@ -18,6 +18,7 @@
 - [和为s的两个数字](src/array/SolutionFor_42.java)
 - [数组中的重复数字](src/array/SolutionFor_50.java)
 - [构建乘积数组](src/array/SolutionFor_51.java)
+- [矩阵中的路径](src/array/SolutionFor_65.java)
 
 [String](src/string)
 
