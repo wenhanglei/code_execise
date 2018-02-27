@@ -30,45 +30,41 @@ public class SolutionFor_65 {
 
 	private void dfs(char[] matrix, int rows, int cols, int v, char[] str, int i){
 		marked[v] = true;
-		if(i == str.length-1 && matrix[v] == str[i]) {
-			hasPath = true;
-			return;
-		}
-		if(i > 0 && matrix[v] != str[i]) {
-			marked[v] = false;
-			return;
-		}
-		if(i < str.length-1 && matrix[v] == str[i]) i++;
-		
-		int row = v / cols;
-		int col = v % cols;
-		
-		//左边有值则向左遍历
-		if(0 <= col-1 && hasPath == false){
-			int left = row*cols + col-1;
-			if(!marked[left])
-				dfs(matrix, rows, cols, left, str, i);
-		}
-		
-		//右边有值则向右遍历
-		if(col+1 < cols && hasPath == false){
-			int right = row*cols + col+1;
-			if(!marked[right])
-				dfs(matrix, rows, cols, right, str, i);
-		}
-		
-		//上边有值则向上遍历
-		if(0 <= row-1 && hasPath == false){
-			int up = (row-1)*cols + col;
-			if(!marked[up])
-				dfs(matrix, rows, cols, up, str, i);
-		}
-		
-		//下边有值则向下遍历
-		if(row+1 < rows && hasPath== false){
-			int down = (row+1)*cols + col;
-			if(!marked[down])
-				dfs(matrix, rows, cols, down, str, i);
+		if(matrix[v] == str[i]) {
+			if(i == str.length-1)
+				hasPath = true;
+			i++;
+				
+			int row = v / cols;
+			int col = v % cols;
+			
+			//左边有值则向左遍历
+			if(0 <= col-1 && hasPath == false){
+				int left = row*cols + col-1;
+				if(!marked[left])
+					dfs(matrix, rows, cols, left, str, i);
+			}
+			
+			//右边有值则向右遍历
+			if(col+1 < cols && hasPath == false){
+				int right = row*cols + col+1;
+				if(!marked[right])
+					dfs(matrix, rows, cols, right, str, i);
+			}
+			
+			//上边有值则向上遍历
+			if(0 <= row-1 && hasPath == false){
+				int up = (row-1)*cols + col;
+				if(!marked[up])
+					dfs(matrix, rows, cols, up, str, i);
+			}
+			
+			//下边有值则向下遍历
+			if(row+1 < rows && hasPath== false){
+				int down = (row+1)*cols + col;
+				if(!marked[down])
+					dfs(matrix, rows, cols, down, str, i);
+			}
 		}
 		marked[v] = false;
 	}
@@ -77,10 +73,11 @@ public class SolutionFor_65 {
 	 * 测试函数
 	 */
 	public static void main(String[] args) {
-		char[] matrix = { 'a', 'b', 'c', 'e', 's', 'f', 'c', 's', 'a', 'd',
-				'e', 'e' };
+//		char[] matrix = { 'a', 'b', 'c', 'e', 's', 'f', 'c', 's', 'a', 'd',
+//				'e', 'e' };
+		char[] matrix = "AAAAAAAAAAAA".toCharArray();
 		SolutionFor_65 sol = new SolutionFor_65();
-		boolean hasPath = sol.hasPath(matrix, 3, 4, "abcb".toCharArray());
+		boolean hasPath = sol.hasPath(matrix, 3, 4, "AAAAAAAAAAAA".toCharArray());
 		System.out.println(hasPath);
 	}
 }
