@@ -73,6 +73,7 @@
 
 - [旋转数组的最小数字](src/search/SolutionFor_06.java)
 - [数据流中的中位数](src/search/SolutionFor_63.java)
+- [机器人的运动范围](src/search/SolutionFor_66.java)
 
 [Sequence](src/sequence)
 
