@@ -1,6 +1,5 @@
-## my coding notebook
-
-***
+my coding notebook
+==================
 
 [Array](src/array)
 
