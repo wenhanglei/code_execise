@@ -66,7 +66,7 @@ my coding notebook
 - [用两个栈实现队列](src/queue_and_stack/SolutionFor_05.java)
 - [包含min函数的栈](src/queue_and_stack/SolutionFor_20.java)
 - [栈的压入、弹出序列](src/queue_and_stack/SolutionFor_21.java)
-- [滑动窗口的最大值](src/search/SolutionFor_64.java)
+- [滑动窗口的最大值](src/queue_and_stack/SolutionFor_64.java)
 
 [Search](src/search)
 
